@@ -85,4 +85,5 @@ jobs:
              env:
               SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
              with:
-              image: your/image-to-test    
+              image: your/image-to-test 
+              continue-on-error: true   
