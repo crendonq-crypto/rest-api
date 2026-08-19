@@ -82,12 +82,9 @@ jobs:
           steps:
            - name: Run Snyk to check Docker image for vulnerabilities
              uses: snyk/actions/docker@master
+             continue-on-error: true
              env:
               SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
              with:
               image: your/image-to-test 
-              continue-on-error: true  
-              uses: snyk/actions/docker@master
-             with:
-              image: your/image-to-test 
-             
+                
